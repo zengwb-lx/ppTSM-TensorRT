@@ -37,7 +37,7 @@ https://github.com/PaddlePaddle/PaddleVideo/tree/develop/deploy/cpp_infer
 **本人选用的是tensorrt,因为其他算法是用tensorrt部署的,如果再加一个paddle_inference会显得太过于杂乱了,详细实现见本人GitHub:**
 
 ## 四. 精度对齐
-为了保证模型转换后精度无损,需要进行paddle, onnx, tensorrt三方推理结果比对:详细可比对predict.py, onnx_infer.py, C++输出结果.
+为了保证模型转换后精度无损,需要进行paddle, onnx, tensorrt三方推理结果比对:详细可比对predict.py, onnx_infer.py, C++输出结果.开发过程中遇到的坑主要是onnx和tensorrt的结果不一致，经过一点一点的debug终于使两者结果保持一致了，在确认部署没有问题后就是算法模型的训练调优了
 
 
 ## 五. 总结
